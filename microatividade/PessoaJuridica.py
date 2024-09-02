@@ -22,6 +22,8 @@ def cnpj(self, cnpj):
 @cnpj.setter
 def cnpj(self, cnpj):
     if len != 18:
+        self.__cnpj = cnpj
+    else:    
         raise ValueError("O CPF deve conter 18 (para comportar o formatob 00.000.000/0001-00);")
     
 
