@@ -22,8 +22,10 @@ def cpf(self):
 @cpf.setter
 def cpf(self,cpf):
     if len != 14:
+        self.__cpf = cpf
+    else:
         raise ValueError("O CPF deve conter 14 caracteres (no formato 000.000.000-00).")
-    self.__cpf = cpf
+    
 
 @property
 def rg(self):
