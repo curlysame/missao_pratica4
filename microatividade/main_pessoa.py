@@ -1,14 +1,19 @@
 from Pessoa import Pessoa
+from PessoaFisica import PessoaFisica
+from PessoaJuridica import PessoaJuridica
 
-pessoa1 = Pessoa("João", "2000-01=01", "000.111.222-33", "15975388-1", False)
+pessoa1 = Pessoa("Empresa XYZ", "12345", "2022-01-01", True)
+pessoa_fisica = PessoaFisica("Ana", "54321", "2020-06-15", True, "1995-05-15", "123.456.789-10", "98765432-1")
+pessoa_juridica = PessoaJuridica("Empresa ABC", "67890", "2023-03-10", True, "2023-01-01", "00.000.000/0001-00")
 
-pessoa1.nome = "Ana"
-pessoa1.dataNascimento = "2001-02-02"
-pessoa1.cpf = "123.456.789-12"
-pessoa1.rg = "12345678-2"
-pessoa1.status = True
+
+
+
 
 
 attrs = vars(pessoa1)
-print('Instancia da classe Pessoa: ')
+print(', '.join("%s: %s" % item for item in attrs.items()))
+attrs = vars(pessoa_fisica)
+print(', '.join("%s: %s" % item for item in attrs.items()))
+attrs = vars(pessoa_juridica)
 print(', '.join("%s: %s" % item for item in attrs.items()))
